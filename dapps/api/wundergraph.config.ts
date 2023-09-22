@@ -29,13 +29,14 @@ configureWunderGraphApplication({
     allowedOrigins:
       process.env.NODE_ENV === 'production'
         ? [
-          'https://turbo.wundergraph.com/'
-        ]
+            // change this before deploying to production to the actual domain where you're deploying your app
+            'http://localhost:3000'
+          ]
         : [
-          'http://localhost:3000',
-          'http://127.0.0.1:3000/',
-          new EnvironmentVariable('WG_ALLOWED_ORIGIN')
-        ]
+            'http://localhost:3000',
+            'http://127.0.0.1:3000/',
+            new EnvironmentVariable('WG_ALLOWED_ORIGIN')
+          ]
   },
   security: {
     enableGraphQLEndpoint:
