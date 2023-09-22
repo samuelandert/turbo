@@ -1,7 +1,7 @@
 {
   "private": true,
   "workspaces": [
-    "dapps/*",
+    "apps/*",
     "packages/*"
   ],
   "scripts": {
