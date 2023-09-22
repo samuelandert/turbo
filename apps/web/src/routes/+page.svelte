@@ -6,9 +6,9 @@
 </script>
 
 <div class="flex items-center justify-center h-screen flex-col">
-  <MyCounterButton />
-
+  <MyCounterButton /><br>
+  my wundergraph query
   {#each data.countries_countries ?? [] as country}
-    <div>{country.name}</div>
+    <b>{country.name}</b>
   {/each}
 </div>
