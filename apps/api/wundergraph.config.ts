@@ -29,7 +29,7 @@ configureWunderGraphApplication({
     allowedOrigins:
       process.env.NODE_ENV === 'production'
         ? [
-          'https://turbo-web-eight.vercel.app'
+          'https://turbo.wundergraph.dev/'
         ]
         : [
           'http://localhost:3000',
