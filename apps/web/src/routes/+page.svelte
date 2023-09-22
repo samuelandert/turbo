@@ -5,10 +5,11 @@
   export let data: PageData;
 </script>
 
-<div class="flex items-center justify-center h-screen flex-col">
-  <MyCounterButton /><br>
-  my wundergraph query
-  {#each data.countries_countries ?? [] as country}
-    <b>{country.name}</b>
-  {/each}
-</div>
+<h1>Web</h1>
+<MyCounterButton />
+
+<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+
+{#each data.countries_countries ?? [] as country}
+  <div>{country.name}</div>
+{/each}
