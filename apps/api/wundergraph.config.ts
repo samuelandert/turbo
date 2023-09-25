@@ -2,6 +2,7 @@ import {
   configureWunderGraphApplication,
   cors,
   EnvironmentVariable,
+  WgEnv,
   introspect,
   templates
 } from '@wundergraph/sdk';
@@ -29,7 +30,7 @@ configureWunderGraphApplication({
     allowedOrigins:
       process.env.NODE_ENV === 'production'
         ? [
-          'https://turbo.wundergraph.dev/'
+          'https://turbo-web-git-main-samuelandert.vercel.app'
         ]
         : [
           'http://localhost:3000',
@@ -40,5 +41,13 @@ configureWunderGraphApplication({
   security: {
     enableGraphQLEndpoint:
       process.env.NODE_ENV !== 'production' || process.env.GITPOD_WORKSPACE_ID !== undefined
-  }
+  },
+  options: {
+    listen: {
+      host: new EnvironmentVariable(WgEnv.NodeHost, 'localhost'),
+      port: new EnvironmentVariable(WgEnv.NodePort, '9991'),
+    },
+    nodeUrl: new EnvironmentVariable(WgEnv.NodeUrl, 'https://turbo.wundergraph.dev'),
+    publicNodeUrl: new EnvironmentVariable(WgEnv.PublicNodeUrl, 'https://turbo-web-git-main-samuelandert.vercel.app'),
+  },
 });
