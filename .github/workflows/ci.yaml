@@ -17,8 +17,8 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 'lts/*'
-        cache: 'yarn'
+        cache: 'npm'
 
-    - run: yarn ci
+    - run: npm ci
 
-    - run: yarn run build
+    - run: npm run build
