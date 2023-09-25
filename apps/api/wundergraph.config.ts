@@ -27,7 +27,16 @@ configureWunderGraphApplication({
   ],
   cors: {
     ...cors.allowAll,
-    allowedOrigins: ['http://turbo-web-git-main-samuelandert.vercel.app']
+    allowedOrigins:
+      process.env.NODE_ENV === 'production'
+        ? [
+          'http://turbo-web-git-main-samuelandert.vercel.app'
+        ]
+        : [
+          'http://localhost:3000',
+          'http://127.0.0.1:3000/',
+          new EnvironmentVariable('WG_ALLOWED_ORIGIN')
+        ]
   },
   security: {
     enableGraphQLEndpoint:
