@@ -14,7 +14,6 @@ const countries = introspect.graphql({
   url: 'https://countries.trevorblades.com/'
 });
 
-// configureWunderGraph emits the configuration
 configureWunderGraphApplication({
   apis: [countries],
   server,
@@ -28,7 +27,7 @@ configureWunderGraphApplication({
   cors: {
     ...cors.allowAll,
     allowedOrigins: [
-      'https://turbo-web-git-main-samuelandert.vercel.app'
+      'https://turbo-git-main-samuelandert.vercel.app'
     ]
   },
   security: {
