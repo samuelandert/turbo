@@ -27,7 +27,7 @@ configureWunderGraphApplication({
   cors: {
     ...cors.allowAll,
     allowedOrigins: [
-      'https://turbo-bay.vercel.app'
+      'http://turbo-bay.vercel.app'
     ]
   },
   security: {
