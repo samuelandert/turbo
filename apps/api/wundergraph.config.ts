@@ -2,7 +2,6 @@ import {
   configureWunderGraphApplication,
   cors,
   EnvironmentVariable,
-  WgEnv,
   introspect,
   templates
 } from '@wundergraph/sdk';
@@ -14,6 +13,7 @@ const countries = introspect.graphql({
   url: 'https://countries.trevorblades.com/'
 });
 
+// configureWunderGraph emits the configuration
 configureWunderGraphApplication({
   apis: [countries],
   server,
