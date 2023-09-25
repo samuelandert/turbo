@@ -30,7 +30,7 @@ configureWunderGraphApplication({
     allowedOrigins:
       process.env.NODE_ENV === 'production'
         ? [
-          'https://turbo-web-git-main-samuelandert.vercel.app'
+          'http://turbo-web-git-main-samuelandert.vercel.app'
         ]
         : [
           'http://localhost:3000',
@@ -42,7 +42,7 @@ configureWunderGraphApplication({
     enableGraphQLEndpoint:
       process.env.NODE_ENV !== 'production' || process.env.GITPOD_WORKSPACE_ID !== undefined
   },
-  // options: {
-  //   publicNodeUrl: new EnvironmentVariable(WgEnv.PublicNodeUrl, 'http://localhost:9991'),
-  // },
+  options: {
+    publicNodeUrl: new EnvironmentVariable("PUBLIC_NODE_URL", 'http://localhost:9991'),
+  },
 });
