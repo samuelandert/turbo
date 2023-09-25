@@ -30,7 +30,7 @@ configureWunderGraphApplication({
     allowedOrigins:
       process.env.NODE_ENV === 'production'
         ? [
-          'https://turbo-web-git-main-samuelandert.vercel.app'
+          'http://turbo-web-git-main-samuelandert.vercel.app'
         ]
         : [
           'http://localhost:3000',
