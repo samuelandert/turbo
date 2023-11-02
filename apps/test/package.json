@@ -14,8 +14,7 @@
 		"test:unit": "vitest"
 	},
 	"dependencies": {
-		"generated-wundergraph": "*",
-		"ui": "*"
+		"generated-wundergraph": "*"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
